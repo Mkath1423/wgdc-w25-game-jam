@@ -1,23 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://ff8i7pxwtv4i"]
+[gd_scene load_steps=3 format=3 uid="uid://vp10bpjsrsi0"]
 
-[ext_resource type="PackedScene" uid="uid://bt2ctbt2rnh31" path="res://scenes/LevelMapLayer.tscn" id="1_yl8xj"]
+[ext_resource type="PackedScene" uid="uid://bqmgq0ryxtwa3" path="res://scenes/BasicTiles.tscn" id="2_1xhl4"]
 [ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player.tscn" id="2_88rhv"]
-[ext_resource type="PackedScene" uid="uid://c56osjcwhkomd" path="res://scenes/killzone.tscn" id="3_haghj"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbh58"]
 
 [node name="Level" type="Node2D"]
 
-[node name="LevelMapLayer" parent="." instance=ExtResource("1_yl8xj")]
-position = Vector2(10, 1)
-script = null
-
 [node name="player" parent="." instance=ExtResource("2_88rhv")]
 
-[node name="Killzone" parent="." instance=ExtResource("3_haghj")]
-position = Vector2(159, -42)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-shape = SubResource("RectangleShape2D_cbh58")
-
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="BasicTiles" parent="." instance=ExtResource("2_1xhl4")]
+position = Vector2(-10, 112)
