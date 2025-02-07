@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=4 uid="uid://bt2ctbt2rnh31"]
 
 [ext_resource type="Script" path="res://level_map_layer.gd" id="1_gjjdl"]
-[ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://icon.svg" id="1_lhhyb"]
+[ext_resource type="Texture2D" path="res://icon.svg" id="1_lhhyb"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_mg033"]
 

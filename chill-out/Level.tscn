@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ff8i7pxwtv4i"]
 
 [ext_resource type="PackedScene" uid="uid://bt2ctbt2rnh31" path="res://LevelMapLayer.tscn" id="1_yl8xj"]
-[ext_resource type="PackedScene" path="res://player.tscn" id="2_uy3yv"]
+[ext_resource type="PackedScene" uid="uid://dg8tp0vkg02ng" path="res://player.tscn" id="2_uy3yv"]
 [ext_resource type="PackedScene" uid="uid://c56osjcwhkomd" path="res://killzone.tscn" id="3_haghj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbh58"]
@@ -19,3 +19,5 @@ position = Vector2(159, -42)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("RectangleShape2D_cbh58")
+
+[node name="Camera2D" type="Camera2D" parent="."]
