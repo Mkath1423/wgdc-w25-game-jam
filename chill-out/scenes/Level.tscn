@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://ff8i7pxwtv4i"]
 
-[ext_resource type="PackedScene" uid="uid://bt2ctbt2rnh31" path="res://LevelMapLayer.tscn" id="1_yl8xj"]
-[ext_resource type="PackedScene" uid="uid://dg8tp0vkg02ng" path="res://player.tscn" id="2_uy3yv"]
-[ext_resource type="PackedScene" uid="uid://c56osjcwhkomd" path="res://killzone.tscn" id="3_haghj"]
+[ext_resource type="PackedScene" uid="uid://bt2ctbt2rnh31" path="res://scenes/LevelMapLayer.tscn" id="1_yl8xj"]
+[ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player.tscn" id="2_88rhv"]
+[ext_resource type="PackedScene" uid="uid://c56osjcwhkomd" path="res://scenes/killzone.tscn" id="3_haghj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbh58"]
 
@@ -10,9 +10,9 @@
 
 [node name="LevelMapLayer" parent="." instance=ExtResource("1_yl8xj")]
 position = Vector2(10, 1)
+script = null
 
-[node name="player" parent="." instance=ExtResource("2_uy3yv")]
-position = Vector2(-26, -63)
+[node name="player" parent="." instance=ExtResource("2_88rhv")]
 
 [node name="Killzone" parent="." instance=ExtResource("3_haghj")]
 position = Vector2(159, -42)

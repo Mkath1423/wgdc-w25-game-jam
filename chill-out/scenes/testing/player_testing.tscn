@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://drg6qgphcnqn2"]
 
-[ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player.tscn" id="1_805ny"]
-[ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://sprites/icon.svg" id="2_oxss8"]
+[ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player.tscn" id="1_hffy6"]
+[ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://sprites/icon.svg" id="2_i048g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5axcu"]
 size = Vector2(127.645, 123.535)
 
 [node name="PlayerTesting" type="Node2D"]
 
-[node name="player" parent="." instance=ExtResource("1_805ny")]
+[node name="player" parent="." instance=ExtResource("1_hffy6")]
 ground_move_speed = 1000
 air_move_speed = 1000
 jump_speed = 1000
@@ -24,7 +24,7 @@ apex_boost_threshhold = 100
 [node name="floor" type="Sprite2D" parent="."]
 position = Vector2(70, 170)
 scale = Vector2(8.46094, 0.671875)
-texture = ExtResource("2_oxss8")
+texture = ExtResource("2_i048g")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="floor"]
 
