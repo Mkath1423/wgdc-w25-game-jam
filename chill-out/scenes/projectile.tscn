@@ -6,8 +6,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_2e27c"]
 
 [node name="Projectile" type="Area2D" groups=["projectile"]]
+scale = Vector2(0.1, 0.1)
 script = ExtResource("1_6mmnj")
-move_speed = 300.0
+move_speed = 500.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
@@ -17,4 +18,5 @@ texture = ExtResource("1_nk34w")
 shape = SubResource("CircleShape2D_2e27c")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(500, 0)
 collide_with_areas = true

@@ -1,7 +1,7 @@
 extends Node2D
 
 
-@onready var starting_room : Node2D = $Rooms/Level0
+@onready var starting_room : Node2D = $Rooms/Level1
 var active_room : Node2D = null
 
 func set_active_room(room):
@@ -10,7 +10,6 @@ func set_active_room(room):
 func _ready() -> void:
 	print($Rooms/Level0)
 	set_active_room(starting_room)
-
 
 func _on_killzone_player_died() -> void:
 	get_tree().reload_current_scene()
