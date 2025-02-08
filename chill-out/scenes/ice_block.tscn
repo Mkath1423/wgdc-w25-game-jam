@@ -1,27 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqe7l5lts38ui"]
+[gd_scene load_steps=3 format=3 uid="uid://clyj3mbgh834l"]
 
-[ext_resource type="Script" path="res://src/ice_block.gd" id="1_g4irc"]
-[ext_resource type="Texture2D" uid="uid://44s6hs7ti3v4" path="res://sprites/Test sprites (crawl-tiles)/wall/dngn_transparent_wall.png" id="2_wsf3a"]
+[ext_resource type="Texture2D" uid="uid://c0ta656f5pf7w" path="res://sprites/Test sprites (crawl-tiles)/wall/relief0.png" id="1_0sv04"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjxp1"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pptgr"]
 size = Vector2(8, 8)
 
-[node name="ice_block" type="Area2D"]
+[node name="IceBlock" type="StaticBody2D"]
 collision_layer = 0
-script = ExtResource("1_g4irc")
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-4, -4)
-shape = SubResource("RectangleShape2D_wjxp1")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+shape = SubResource("RectangleShape2D_pptgr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-4, -4)
-texture = ExtResource("2_wsf3a")
+texture = ExtResource("1_0sv04")
 region_enabled = true
 region_rect = Rect2(0, 0, 8, 8)
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

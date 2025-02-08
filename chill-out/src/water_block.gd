@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var timer = $Timer
+signal block_frozen
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,10 +13,6 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if get_tree().get_nodes_in_group("projectile"):
-		set_collision_layer_value(1, true)
-		timer.start()
-
-
-func _on_timer_timeout() -> void:
-	set_collision_layer_value(1, false)
+	print("Water block body entered!")
+	if body in get_tree().get_nodes_in_group("projectile"):
+		block_frozen.emit()
