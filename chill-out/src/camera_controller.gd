@@ -38,8 +38,6 @@ func smooth_follow(delta: float):
 		bounds.position + 0.5 * camera_size,
 		bounds.position + bounds.size - 0.5 * camera_size
 	)
-	print(get_viewport().size)
-	print("folling player", clamped_world_pos, bounds.position + 0.5 * get_viewport().size, bounds.position + bounds.size - 0.5 * get_viewport().size)
 	
 	var to_player = clamped_world_pos - global_position
 	var dist = to_player.length()
