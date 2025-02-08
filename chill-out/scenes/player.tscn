@@ -10,6 +10,7 @@ height = 56.0
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
 position = Vector2(-3, 4)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_g6mxo")
 ground_move_speed = 1000
 air_move_speed = 1000
