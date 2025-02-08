@@ -4,11 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://sprites/icon.svg" id="2_kevla"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnf7x"]
-radius = 44.0
-height = 180.0
+radius = 15.0
+height = 56.0
 
 [node name="player" type="CharacterBody2D"]
 position = Vector2(-3, 4)
+scale = Vector2(0.5, 0.5)
 collision_layer = 3
 script = ExtResource("1_g6mxo")
 ground_move_speed = 1000
@@ -24,8 +25,10 @@ apex_move_speed_bonus = 100
 apex_boost_threshhold = 500
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.690372, 1.42042)
+position = Vector2(-28.5919, -62.9534)
+scale = Vector2(0.243624, 0.436773)
 texture = ExtResource("2_kevla")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-29, -63)
 shape = SubResource("CapsuleShape2D_lnf7x")
