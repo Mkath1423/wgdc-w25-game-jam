@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 @export var ground_move_speed = 0
 @export var air_move_speed = 0
@@ -23,6 +23,9 @@ var was_jumping = 0
 @export var apex_boost_threshhold = 0
 
 var jumping : bool = false
+
+func get_world_center():
+	return $Sprite2D.global_position
 
 func check_grounded():
 	# grounding

@@ -10,10 +10,7 @@ size = Vector2(127.645, 123.535)
 [node name="PlayerTesting" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_hffy6")]
-max_fall_speed = 400000
-coyote_frames = 20
-apex_move_speed_bonus = 500
-apex_boost_threshhold = 100
+script = null
 
 [node name="floor" type="Sprite2D" parent="."]
 position = Vector2(70, 170)

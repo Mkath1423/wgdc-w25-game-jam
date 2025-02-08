@@ -11,20 +11,17 @@ b = Vector2(679, 438)
 [node name="TestRoom" type="Node2D"]
 
 [node name="AnimatedCamera" parent="." instance=ExtResource("1_fujro")]
-position = Vector2(1, 0)
-follow_rate = 4.0
-max_follow_distance = 150.0
-min_follow_distance = 1.0
+follow_rate = 0.5
+max_follow_distance = 75.0
+min_follow_distance = 3.0
 min_pan_distance = 15.0
 min_pan_rate = 50.0
 pan_target = Vector2(450, 620)
-bounds = Rect2(-1000, -1000, 2000, 2000)
+bounds = Rect2(-100, 200, -100, 200)
 
 [node name="player" parent="." instance=ExtResource("2_gs7x4")]
-position = Vector2(-18, 22)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-79, 116)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("SegmentShape2D_wvpmn")

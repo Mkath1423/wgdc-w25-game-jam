@@ -24,12 +24,10 @@ apex_move_speed_bonus = 100
 apex_boost_threshhold = 500
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-28.5919, -62.9534)
 scale = Vector2(0.243624, 0.436773)
 texture = ExtResource("2_kevla")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-29, -63)
 shape = SubResource("CapsuleShape2D_lnf7x")
 
 [node name="ThermalGun" parent="." instance=ExtResource("3_w65ue")]
