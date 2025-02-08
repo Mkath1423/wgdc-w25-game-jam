@@ -19,4 +19,8 @@ shape = SubResource("CircleShape2D_2e27c")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(500, 0)
+collision_mask = 3
 collide_with_areas = true
+
+[connection signal="area_entered" from="." to="." method="collide"]
+[connection signal="body_entered" from="." to="." method="collide"]

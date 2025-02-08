@@ -14,9 +14,15 @@ func on_create(from: Vector2, to: Vector2):
 func _physics_process(delta):
 	raycast.force_raycast_update()
 	
-	if raycast.is_colliding():
-		global_position = raycast.get_collision_point()
-		
-	else:
-		global_position.x += move_speed * delta
+	#if raycast.is_colliding():
+		#global_position = raycast.get_collision_point()
+		#
+	#else:
+	global_position += move_direction * move_speed * delta
 	
+
+func collide(node):
+	if node.is_in_group("player"):
+		return
+		
+	queue_free()
