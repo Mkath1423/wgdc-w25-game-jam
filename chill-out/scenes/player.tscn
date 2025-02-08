@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bsiba0xh01axl"]
 
-[ext_resource type="Script" path="res://sprites/player.gd" id="1_g6mxo"]
+[ext_resource type="Script" path="res://src/player.gd" id="1_g6mxo"]
 [ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://sprites/icon.svg" id="2_kevla"]
 [ext_resource type="PackedScene" uid="uid://b2siuigsiugyw" path="res://scenes/thermal_gun.tscn" id="3_w65ue"]
 
