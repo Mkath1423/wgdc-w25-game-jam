@@ -36,6 +36,8 @@ func check_for_jump_input():
 	# jump buffering
 	if Input.is_action_just_pressed("jump"):
 		was_jumping = jump_buffering_frames
+	elif Input.is_action_just_released("jump"):
+		was_jumping = 0
 	else:
 		was_jumping -= 1
 
