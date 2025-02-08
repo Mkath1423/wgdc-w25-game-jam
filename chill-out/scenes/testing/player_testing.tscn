@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://drg6qgphcnqn2"]
+[gd_scene load_steps=5 format=3 uid="uid://drg6qgphcnqn2"]
 
 [ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player.tscn" id="1_hffy6"]
 [ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://sprites/icon.svg" id="2_i048g"]
+[ext_resource type="PackedScene" uid="uid://c5mnkal840l8g" path="res://scenes/projectile.tscn" id="3_6g1o5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5axcu"]
 size = Vector2(127.645, 123.535)
@@ -9,15 +10,8 @@ size = Vector2(127.645, 123.535)
 [node name="PlayerTesting" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_hffy6")]
-ground_move_speed = 1000
-air_move_speed = 1000
-jump_speed = 1000
 max_fall_speed = 400000
 coyote_frames = 20
-jump_buffering_frames = 5
-variable_jump_stopping = 3
-additional_fall_gravity_threshhold = 100.0
-additional_fall_gravity = 2.0
 apex_move_speed_bonus = 500
 apex_boost_threshhold = 100
 
@@ -34,3 +28,6 @@ shape = SubResource("RectangleShape2D_5axcu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.5, 0.5)
+
+[node name="Projectile" parent="." instance=ExtResource("3_6g1o5")]
+position = Vector2(-239, -17)

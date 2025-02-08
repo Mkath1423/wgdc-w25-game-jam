@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5mnkal840l8g"]
+
+[ext_resource type="Script" path="res://src/projectile.gd" id="1_6mmnj"]
+[ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://sprites/icon.svg" id="1_nk34w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2e27c"]
+
+[node name="Projectile" type="Area2D" groups=["projectile"]]
+script = ExtResource("1_6mmnj")
+move_speed = 300.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_nk34w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2e27c")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+collide_with_areas = true
