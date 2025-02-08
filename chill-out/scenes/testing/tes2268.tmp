@@ -11,8 +11,9 @@ b = Vector2(686, 432)
 [node name="TestRoom" type="Node2D"]
 
 [node name="AnimatedCamera" parent="." instance=ExtResource("1_fujro")]
-min_pan_distance = 15.0
-min_pan_rate = 50.0
+scroll_speed = 0.0
+min_pan_distance = 0.0
+min_pan_rate = 0.0
 pan_target = Vector2(450, 620)
 
 [node name="player" parent="." instance=ExtResource("2_gs7x4")]

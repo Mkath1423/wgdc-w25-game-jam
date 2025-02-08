@@ -10,6 +10,11 @@ script = ExtResource("1_gtsfl")
 follow_rate = 4.0
 max_follow_distance = 75.0
 min_follow_distance = 3.0
+min_pan_distance = 3.0
+pan_rate = 4.0
+min_pan_rate = 20.0
+panning = true
+pan_target = Vector2(450, 640)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 collision_layer = 128

@@ -7,7 +7,12 @@ extends Node2D
 
 var player : Node2D = null
 
-var panning = false
+@export var min_pan_distance : float = 0
+@export var pan_rate : float = 0
+@export var min_pan_rate : float = 0
+
+@export var panning = false
+@export var pan_target : Vector2 = Vector2(0, 0)
 
 signal done_panning
 
@@ -22,8 +27,6 @@ func initialize():
 	else:
 		player = p[0]
 
-func update_camera_position():
-	pass
 
 func smooth_follow(delta: float):
 	if player == null: 
@@ -39,11 +42,29 @@ func smooth_follow(delta: float):
 		position += ((dist - max_follow_distance)/dist) * to_player
 	
 	else:
-		global_position = global_position.lerp(player.global_position, delta*follow_rate)
+		global_position = global_position.lerp(player.global_position, clamp(delta*follow_rate, min_pan_rate, 1))
+
+func start_panning(target: Vector2):
+	pan_target = target
+	panning = true
+	
+func pan(delta):
+	
+	var to_target = pan_target - global_position
+	var dist = to_target.length()
+	
+	if dist < min_follow_distance:
+		position = pan_target
+		panning = false
+		done_panning.emit()
+	
+	else:
+		global_position = global_position.lerp(pan_target, delta*pan_rate)
+		
 
 func _physics_process(delta: float) -> void:
 	if panning:
-		pass
+		pan(delta)
 	
 	else:
 		smooth_follow(delta)
