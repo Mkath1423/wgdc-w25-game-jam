@@ -1,10 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://vp10bpjsrsi0"]
+[gd_scene load_steps=11 format=4 uid="uid://vp10bpjsrsi0"]
 
 [ext_resource type="Script" path="res://src/level.gd" id="1_f26ym"]
 [ext_resource type="Texture2D" uid="uid://d3hsl3mh862xf" path="res://sprites/Test sprites (crawl-tiles)/wall/crystal_wall00.png" id="2_jav3s"]
 [ext_resource type="PackedScene" uid="uid://bdjhukqkbfwrx" path="res://scenes/killzone.tscn" id="3_3csdu"]
 [ext_resource type="Texture2D" uid="uid://ix3fgbylb6cr" path="res://sprites/Test sprites (crawl-tiles)/wall/pebble_red0.png" id="3_i8fxu"]
-[ext_resource type="PackedScene" uid="uid://bqe7l5lts38ui" path="res://scenes/ice_block.tscn" id="5_t2vok"]
+[ext_resource type="PackedScene" path="res://scenes/ice_block.tscn" id="5_t2vok"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xfvkk"]
 texture = ExtResource("2_jav3s")
@@ -71,6 +71,9 @@ sources/3 = SubResource("TileSetAtlasSource_guqlh")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a8oeg"]
 size = Vector2(70, 15)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwvep"]
+size = Vector2(398, 398)
+
 [node name="Level0" type="Node2D"]
 script = ExtResource("1_f26ym")
 
@@ -86,3 +89,7 @@ shape = SubResource("RectangleShape2D_a8oeg")
 
 [node name="ice_block" parent="." instance=ExtResource("5_t2vok")]
 position = Vector2(-103, 148)
+
+[node name="CameraBounds" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_lwvep")

@@ -1,14 +1,16 @@
 extends Node2D
 
 
-# Called when the node enters the scene tree for the first time.
+@onready var starting_room : Node2D = $Rooms/Level0
+var active_room : Node2D = null
+
+func set_active_room(room):
+	$Camera.bounds = room.get_camera_bounds()
+
 func _ready() -> void:
-	pass # Replace with function body.
+	print($Rooms/Level0)
+	set_active_room(starting_room)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func _on_killzone_player_died() -> void:
 	get_tree().reload_current_scene()

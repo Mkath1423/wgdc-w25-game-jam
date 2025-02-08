@@ -1,6 +1,5 @@
-extends Node2D
+extends Camera2D
 
-@export var scroll_speed : float = 0
 @export var follow_rate : float = 0 
 @export var max_follow_distance : float = 0
 @export var min_follow_distance : float = 0
@@ -15,7 +14,7 @@ var player : Node2D = null
 @export var pan_target : Vector2 = Vector2(0, 0)
 
 @export var bounds : Rect2
-
+@export var camera_size : Vector2
 signal done_panning
 
 func _ready() -> void:
@@ -34,11 +33,13 @@ func initialize():
 func smooth_follow(delta: float):
 	if player == null: 
 		return
-	
+
 	var clamped_world_pos = player.get_world_center().clamp(
-		bounds.position + 0.5 * $CollisionShape2D.shape.size,
-		bounds.position + bounds.size - 0.5 * $CollisionShape2D.shape.size
+		bounds.position + 0.5 * camera_size,
+		bounds.position + bounds.size - 0.5 * camera_size
 	)
+	print(get_viewport().size)
+	print("folling player", clamped_world_pos, bounds.position + 0.5 * get_viewport().size, bounds.position + bounds.size - 0.5 * get_viewport().size)
 	
 	var to_player = clamped_world_pos - global_position
 	var dist = to_player.length()

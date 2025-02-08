@@ -1,17 +1,4 @@
-extends Node2D
+class_name Level extends Node2D
 
-
-# THIS WILL BECOME THE MAIN SCRIPT
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
-func _on_killzone_player_died() -> void:
-	get_tree().reload_current_scene()
+func get_camera_bounds() -> Rect2:
+	return Rect2($CameraBounds.global_position - $CameraBounds.shape.size, 2*$CameraBounds.shape.size)
