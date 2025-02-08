@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d3hsl3mh862xf" path="res://sprites/Test sprites (crawl-tiles)/wall/crystal_wall00.png" id="2_jav3s"]
 [ext_resource type="PackedScene" uid="uid://bdjhukqkbfwrx" path="res://scenes/killzone.tscn" id="3_3csdu"]
 [ext_resource type="Texture2D" uid="uid://ix3fgbylb6cr" path="res://sprites/Test sprites (crawl-tiles)/wall/pebble_red0.png" id="3_i8fxu"]
-[ext_resource type="PackedScene" path="res://scenes/ice_block.tscn" id="5_t2vok"]
+[ext_resource type="PackedScene" uid="uid://bqe7l5lts38ui" path="res://scenes/ice_block.tscn" id="5_t2vok"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xfvkk"]
 texture = ExtResource("2_jav3s")
