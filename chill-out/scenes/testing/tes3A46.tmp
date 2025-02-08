@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bb885hkld7wjl"]
+
+[ext_resource type="PackedScene" uid="uid://vrdfrblclk7p" path="res://scenes/animated_camera.tscn" id="1_fujro"]
+[ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player.tscn" id="2_gs7x4"]
+[ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://sprites/icon.svg" id="3_24pnn"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wvpmn"]
+a = Vector2(-693, 434)
+b = Vector2(686, 432)
+
+[node name="TestRoom" type="Node2D"]
+
+[node name="AnimatedCamera" parent="." instance=ExtResource("1_fujro")]
+scroll_speed = 0.0
+min_pan_distance = 0.0
+min_pan_rate = 0.0
+pan_target = Vector2(450, 620)
+
+[node name="player" parent="." instance=ExtResource("2_gs7x4")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_wvpmn")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-1.49998, 504)
+scale = Vector2(10.6953, 1)
+texture = ExtResource("3_24pnn")

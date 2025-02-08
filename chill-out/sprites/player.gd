@@ -34,8 +34,12 @@ func check_grounded():
 
 func check_for_jump_input():
 	# jump buffering
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("jump"):
 		was_jumping = jump_buffering_frames
+		
+	elif Input.is_action_just_released("jump"):
+		was_jumping = 0
+
 	else:
 		was_jumping -= 1
 
@@ -44,7 +48,7 @@ func check_for_jump_cancel():
 		return
 		
 	# variable jumps
-	if Input.is_action_just_released("ui_accept") and get_last_motion().y < 0:
+	if Input.is_action_just_released("jump") and get_last_motion().y < 0:
 		velocity.y = velocity.y / variable_jump_stopping
 		jumping = false
 
@@ -63,7 +67,7 @@ func strafing():
 	if jumping and not is_on_floor() and abs(get_last_motion().y) < apex_boost_threshhold:
 		speed += apex_move_speed_bonus
 
-	var direction = Input.get_axis("ui_left", "ui_right")
+	var direction = Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * speed
 	else:
@@ -73,6 +77,16 @@ func clamp_falling():
 	# fall velocity clamp
 	if velocity.y > max_fall_speed:
 		velocity.y = max_fall_speed
+
+func _process(delta):
+	if Input.is_action_just_pressed("fire"):
+		$ThermalGun.fire(
+			global_position,
+			get_global_mouse_position()
+		)
+		
+	if Input.is_action_just_pressed("pickup"):
+		$ThermalGun.load(preload("res://scenes/projectile.tscn"))
 
 func _physics_process(delta):
 	# gravity
@@ -91,7 +105,7 @@ func _physics_process(delta):
 		do_jump()
 
 	check_for_jump_cancel()
-		
+	
 	strafing()
 	clamp_falling()
 

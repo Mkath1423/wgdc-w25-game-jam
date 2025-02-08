@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://bb885hkld7wjl"]
+
+[ext_resource type="PackedScene" uid="uid://vrdfrblclk7p" path="res://scenes/animated_camera.tscn" id="1_fujro"]
+[ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player.tscn" id="2_gs7x4"]
+[ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://sprites/icon.svg" id="3_24pnn"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wvpmn"]
+a = Vector2(-697, 441)
+b = Vector2(679, 438)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_d0d88"]
+a = Vector2(72, 274)
+b = Vector2(72, -565)
+
+[node name="TestRoom" type="Node2D"]
+
+[node name="AnimatedCamera" parent="." instance=ExtResource("1_fujro")]
+safe_margin = 1.0
+follow_rate = 0.5
+max_follow_distance = 75.0
+min_follow_distance = 3.0
+min_pan_distance = 15.0
+min_pan_rate = 50.0
+pan_target = Vector2(450, 620)
+
+[node name="player" parent="." instance=ExtResource("2_gs7x4")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_wvpmn")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-1.49998, 504)
+scale = Vector2(10.6953, 1)
+texture = ExtResource("3_24pnn")
+
+[node name="camera_bounds" type="StaticBody2D" parent="."]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="camera_bounds"]
+position = Vector2(-828, 159)
+shape = SubResource("SegmentShape2D_d0d88")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="camera_bounds"]
+position = Vector2(656, 150)
+shape = SubResource("SegmentShape2D_d0d88")
