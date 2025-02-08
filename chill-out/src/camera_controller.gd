@@ -39,12 +39,12 @@ func smooth_follow(delta: float):
 		bounds.position + 0.5 * $CollisionShape2D.shape.size,
 		bounds.position + bounds.size - 0.5 * $CollisionShape2D.shape.size
 	)
-	print(clamped_world_pos, bounds.position + $CollisionShape2D.shape.size, bounds.position + bounds.size - $CollisionShape2D.shape.size)
+	
 	var to_player = clamped_world_pos - global_position
 	var dist = to_player.length()
 	
 	if dist < min_follow_distance:
-		position += clamped_world_pos
+		global_position = clamped_world_pos
 		
 	else:
 		global_position = global_position.lerp(clamped_world_pos, delta*follow_rate)
