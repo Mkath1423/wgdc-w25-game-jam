@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://vp10bpjsrsi0"]
+[gd_scene load_steps=6 format=3 uid="uid://vp10bpjsrsi0"]
 
+[ext_resource type="Script" path="res://scenes/level.gd" id="1_17ycu"]
 [ext_resource type="PackedScene" uid="uid://bqmgq0ryxtwa3" path="res://scenes/BasicTiles.tscn" id="2_1xhl4"]
 [ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player.tscn" id="2_88rhv"]
+[ext_resource type="PackedScene" uid="uid://bdjhukqkbfwrx" path="res://scenes/killzone.tscn" id="3_3csdu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5up6"]
+size = Vector2(175, 18)
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_17ycu")
 
 [node name="player" parent="." instance=ExtResource("2_88rhv")]
 
@@ -11,3 +17,12 @@
 
 [node name="BasicTiles" parent="." instance=ExtResource("2_1xhl4")]
 position = Vector2(-10, 112)
+
+[node name="Killzone" parent="." instance=ExtResource("3_3csdu")]
+position = Vector2(363, 85)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(-174.5, 67)
+shape = SubResource("RectangleShape2D_d5up6")
+
+[connection signal="player_died" from="Killzone" to="." method="_on_killzone_player_died"]
