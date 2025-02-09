@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdodhuto2lk5"]
+
+[ext_resource type="Script" path="res://src/freezable_block.gd" id="1_yl4uh"]
+[ext_resource type="PackedScene" uid="uid://bqe7l5lts38ui" path="res://scenes/interactives/water_block.tscn" id="2_ykefu"]
+[ext_resource type="PackedScene" uid="uid://clyj3mbgh834l" path="res://scenes/interactives/ice_block.tscn" id="3_2g0h0"]
+
+[node name="FreezableBlock" type="Node2D"]
+script = ExtResource("1_yl4uh")
+
+[node name="water_block" parent="." instance=ExtResource("2_ykefu")]
+
+[node name="IceBlock" parent="." instance=ExtResource("3_2g0h0")]
+visible = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="area_entered" from="water_block" to="water_block" method="_on_area_entered"]
+[connection signal="block_frozen" from="water_block" to="." method="_on_water_block_block_frozen"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

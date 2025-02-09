@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" path="res://src/player.gd" id="1_g6mxo"]
 [ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://sprites/icon.svg" id="2_kevla"]
-[ext_resource type="PackedScene" uid="uid://b2siuigsiugyw" path="res://scenes/thermal_gun.tscn" id="3_w65ue"]
+[ext_resource type="PackedScene" uid="uid://b2siuigsiugyw" path="res://scenes/player/thermal_gun.tscn" id="3_w65ue"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnf7x"]
 radius = 15.0
 height = 56.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tg52w"]
-size = Vector2(32, 56)
+size = Vector2(48, 72)
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
 position = Vector2(-3, 4)

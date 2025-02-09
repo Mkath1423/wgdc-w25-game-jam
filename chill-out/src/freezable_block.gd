@@ -8,6 +8,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	ice_block.hide() # Replace with function body.
+	water_block.show()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

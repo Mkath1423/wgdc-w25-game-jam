@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=4 uid="uid://bqmgq0ryxtwa3"]
 
-[ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://sprites/icon.svg" id="1_p16ew"]
-[ext_resource type="Texture2D" uid="uid://d3hsl3mh862xf" path="res://sprites/Test sprites (crawl-tiles)/wall/crystal_wall00.png" id="2_mn7s5"]
-[ext_resource type="Script" path="res://src/basic_tiles.gd" id="2_n0ssc"]
-[ext_resource type="Texture2D" uid="uid://ix3fgbylb6cr" path="res://sprites/Test sprites (crawl-tiles)/wall/pebble_red0.png" id="3_gb2gr"]
+[ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://sprites/icon.svg" id="1_mmdg0"]
+[ext_resource type="Texture2D" uid="uid://d3hsl3mh862xf" path="res://sprites/Test sprites (crawl-tiles)/wall/crystal_wall00.png" id="2_v7ky4"]
+[ext_resource type="Texture2D" uid="uid://ix3fgbylb6cr" path="res://sprites/Test sprites (crawl-tiles)/wall/pebble_red0.png" id="3_3akh0"]
+[ext_resource type="Script" path="res://src/basic_tiles.gd" id="4_dk6kx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_asqns"]
-texture = ExtResource("1_p16ew")
+texture = ExtResource("1_mmdg0")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -104,7 +104,7 @@ texture = ExtResource("1_p16ew")
 7:7/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g3x6u"]
-texture = ExtResource("2_mn7s5")
+texture = ExtResource("2_v7ky4")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -115,7 +115,7 @@ texture = ExtResource("2_mn7s5")
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_20kte"]
-texture = ExtResource("3_gb2gr")
+texture = ExtResource("3_3akh0")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
@@ -131,4 +131,4 @@ sources/2 = SubResource("TileSetAtlasSource_20kte")
 position = Vector2(-16, 1)
 tile_map_data = PackedByteArray("AAD7/wQAAQAAAAAAAAD8/wQAAQAAAAAAAAD9/wQAAQAAAAAAAAD+/wQAAQAAAAAAAAD//wQAAQAAAAAAAAAAAAQAAQAAAAAAAAABAAQAAQAAAAAAAAACAAQAAQAAAAAAAAADAAQAAQAAAAAAAAAEAAQAAQAAAAAAAAAFAAQAAQAAAAAAAAAGAAQAAQAAAAAAAAAHAAQAAQAAAAAAAAAIAAQAAQAAAAAAAAAJAAQAAQAAAAAAAAAJAAUAAQAAAAAAAAAKAAUAAgAAAAAAAAALAAUAAgAAAAAAAAAMAAUAAgAAAAAAAAANAAUAAgAAAAAAAAAOAAUAAgAAAAAAAAAPAAQAAgAAAAAAAAAQAAQAAgAAAAAAAAARAAQAAgAAAAAAAAASAAQAAgAAAAAAAAATAAQAAgAAAAAAAAAUAAQAAgAAAAAAAAAVAAQAAgAAAAAAAAAWAAQAAgAAAAAAAAAXAAUAAgAAAAAAAAAYAAUAAgAAAAAAAAAZAAUAAgAAAAAAAAAaAAUAAgAAAAAAAAAbAAUAAgAAAAAAAAAcAAUAAgAAAAAAAAAdAAUAAgAAAAAAAAA=")
 tile_set = SubResource("TileSet_7fnm6")
-script = ExtResource("2_n0ssc")
+script = ExtResource("4_dk6kx")

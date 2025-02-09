@@ -1,15 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://dydqh2pwn52wh"]
 
-[ext_resource type="Script" path="res://src/level.gd" id="1_sni0a"]
-[ext_resource type="PackedScene" uid="uid://cdodhuto2lk5" path="res://scenes/freezable_block.tscn" id="4_2u6up"]
+[ext_resource type="Script" path="res://src/level.gd" id="1_m4qpt"]
+[ext_resource type="PackedScene" uid="uid://cdodhuto2lk5" path="res://scenes/interactives/freezable_block.tscn" id="2_undhe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lwvep"]
 size = Vector2(398, 398)
 
 [node name="LevelTest" type="Node2D"]
-script = ExtResource("1_sni0a")
+script = ExtResource("1_m4qpt")
 
-[node name="FreezableBlock" parent="." instance=ExtResource("4_2u6up")]
+[node name="FreezableBlock" parent="." instance=ExtResource("2_undhe")]
 position = Vector2(45, 145)
 
 [node name="CameraBounds" type="CollisionShape2D" parent="."]

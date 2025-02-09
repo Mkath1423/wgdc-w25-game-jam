@@ -1,11 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://3viwbxetyos0"]
 
 [ext_resource type="PackedScene" uid="uid://dbl588lrfe2g6" path="res://scenes/ammo_pickups/ammo_pickup.tscn" id="1_jwtra"]
-[ext_resource type="PackedScene" uid="uid://c5mnkal840l8g" path="res://scenes/projectile.tscn" id="2_wcimf"]
+[ext_resource type="Texture2D" uid="uid://cijnq1sjk4cjv" path="res://sprites/tiles.png" id="2_4glnb"]
 
 [node name="SnowPileAmmoPickup" instance=ExtResource("1_jwtra")]
 position = Vector2(0.1, 0)
-scale = Vector2(0.1, 0.1)
 input_pickable = false
-is_infinite = true
-projectile = ExtResource("2_wcimf")
+
+[node name="Sprite2D" parent="." index="0"]
+texture_filter = 1
+scale = Vector2(1, 1)
+texture = ExtResource("2_4glnb")
+region_enabled = true
+region_rect = Rect2(56, 24, 16, 16)

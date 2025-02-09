@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://drg6qgphcnqn2"]
 
-[ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player.tscn" id="1_hffy6"]
+[ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player/player.tscn" id="1_hffy6"]
 [ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://sprites/icon.svg" id="2_i048g"]
-[ext_resource type="PackedScene" uid="uid://c5mnkal840l8g" path="res://scenes/projectile.tscn" id="3_6g1o5"]
+[ext_resource type="PackedScene" uid="uid://c5mnkal840l8g" path="res://scenes/projectiles/projectile.tscn" id="3_6g1o5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5axcu"]
 size = Vector2(127.645, 123.535)

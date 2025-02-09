@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://clyj3mbgh834l"]
 
-[ext_resource type="Texture2D" uid="uid://c0ta656f5pf7w" path="res://sprites/Test sprites (crawl-tiles)/wall/relief0.png" id="1_0sv04"]
+[ext_resource type="Texture2D" uid="uid://cijnq1sjk4cjv" path="res://sprites/tiles.png" id="1_ocwwy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pptgr"]
 size = Vector2(8, 8)
@@ -14,7 +14,8 @@ position = Vector2(-4, -4)
 shape = SubResource("RectangleShape2D_pptgr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(-4, -4)
-texture = ExtResource("1_0sv04")
+texture = ExtResource("1_ocwwy")
 region_enabled = true
-region_rect = Rect2(0, 0, 8, 8)
+region_rect = Rect2(24, 40, 8, 8)

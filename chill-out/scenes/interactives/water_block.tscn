@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bqe7l5lts38ui"]
 
 [ext_resource type="Script" path="res://src/water_block.gd" id="1_jvyw3"]
-[ext_resource type="Texture2D" uid="uid://44s6hs7ti3v4" path="res://sprites/Test sprites (crawl-tiles)/wall/dngn_transparent_wall.png" id="2_mmdnk"]
+[ext_resource type="Texture2D" uid="uid://cijnq1sjk4cjv" path="res://sprites/tiles.png" id="2_1js0w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wjxp1"]
 size = Vector2(8, 8)
@@ -14,9 +14,10 @@ position = Vector2(-4, -4)
 shape = SubResource("RectangleShape2D_wjxp1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(-4, -4)
-texture = ExtResource("2_mmdnk")
+texture = ExtResource("2_1js0w")
 region_enabled = true
-region_rect = Rect2(0, 0, 8, 8)
+region_rect = Rect2(24, 16, 8, 8)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
