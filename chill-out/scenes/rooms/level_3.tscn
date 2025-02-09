@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=4 uid="uid://b2pykte1uohw"]
 
-[ext_resource type="PackedScene" uid="uid://cehb7uh35t57g" path="res://scenes/Rooms/base_level.tscn" id="1_pjs81"]
+[ext_resource type="PackedScene" uid="uid://cu8tni4lsx15t" path="res://scenes/Rooms/base_level.tscn" id="1_pjs81"]
 [ext_resource type="PackedScene" uid="uid://36vw18bv23is" path="res://scenes/interactives/turret.tscn" id="2_ungmg"]
-[ext_resource type="PackedScene" uid="uid://cgd0q66vacmbo" path="res://scenes/interactives/Gate.tscn" id="3_vpfe1"]
+[ext_resource type="PackedScene" uid="uid://davmk3gbx4syw" path="res://scenes/interactives/Gate.tscn" id="3_vpfe1"]
 [ext_resource type="PackedScene" uid="uid://cdodhuto2lk5" path="res://scenes/interactives/freezable_block.tscn" id="4_6q2sr"]
-[ext_resource type="PackedScene" uid="uid://ym3qv2qpdvd6" path="res://scenes/interactives/switch.tscn" id="5_k6ld1"]
+[ext_resource type="PackedScene" uid="uid://dmp2ifuv4fknm" path="res://scenes/interactives/switch.tscn" id="5_k6ld1"]
 [ext_resource type="PackedScene" uid="uid://bdjhukqkbfwrx" path="res://scenes/interactives/killzone.tscn" id="6_k5d4p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n58o6"]
@@ -24,7 +24,7 @@ position = Vector2(492, -485.938)
 shape = SubResource("RectangleShape2D_n58o6")
 
 [node name="SpawnPoint" parent="." index="2"]
-position = Vector2(75, -56)
+position = Vector2(75, -63)
 
 [node name="Turret" parent="." index="3" instance=ExtResource("2_ungmg")]
 position = Vector2(300, -268)

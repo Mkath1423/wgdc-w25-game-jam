@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=4 uid="uid://xbbu2ru4p84l"]
+[gd_scene load_steps=8 format=4 uid="uid://dnh3bksb7u46f"]
 
-[ext_resource type="PackedScene" uid="uid://cehb7uh35t57g" path="res://scenes/rooms/base_level.tscn" id="1_i7wik"]
+[ext_resource type="PackedScene" uid="uid://cu8tni4lsx15t" path="res://scenes/rooms/base_level.tscn" id="1_i7wik"]
 [ext_resource type="PackedScene" uid="uid://3viwbxetyos0" path="res://scenes/ammo_pickups/snow_pile_ammo_pickup.tscn" id="2_1bl4u"]
 [ext_resource type="PackedScene" uid="uid://cdodhuto2lk5" path="res://scenes/interactives/freezable_block.tscn" id="3_8ubfx"]
 [ext_resource type="PackedScene" uid="uid://cnhj3m7w02j7t" path="res://scenes/ammo_pickups/freeze_crystal_ammo_pickup.tscn" id="4_js2yt"]
@@ -44,6 +44,7 @@ position = Vector2(138, -266)
 
 [node name="Turret" parent="." index="10" instance=ExtResource("6_2wi74")]
 position = Vector2(308, -191)
+rotation = -0.902335
 
 [node name="CameraBounds" parent="Area2D" index="0"]
 position = Vector2(203, -202.47)

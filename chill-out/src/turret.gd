@@ -24,5 +24,5 @@ func fire():
 	var p = projectile.instantiate()
 	get_tree().root.add_child(p)
 	if p.has_method("on_create"):
-		p.on_create(global_position + Vector2(0, -4), to_global(Vector2(0, -8)))
+		p.on_create(to_global(Vector2(0, -4)), to_global(Vector2(0, -8)))
 	

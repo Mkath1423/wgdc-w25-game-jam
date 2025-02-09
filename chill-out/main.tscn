@@ -28,28 +28,34 @@ position = Vector2(84, -224)
 [node name="deathzones" type="Area2D" parent="."]
 script = ExtResource("4_l4ks6")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="deathzones"]
+position = Vector2(603, 436)
+shape = SubResource("RectangleShape2D_sn81w")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="deathzones"]
-position = Vector2(581.625, 422)
+position = Vector2(1022, 428)
 shape = SubResource("RectangleShape2D_sn81w")
 
 [node name="Rooms" type="Node" parent="."]
 
 [node name="room_1" parent="Rooms" instance=ExtResource("6_vqxw3")]
-position = Vector2(0, 8)
 room = ExtResource("4_ruq5o")
 
 [node name="level_1" parent="Rooms/room_1" instance=ExtResource("4_ruq5o")]
 metadata/_edit_lock_ = true
 
 [node name="room_2" parent="Rooms" instance=ExtResource("6_vqxw3")]
-position = Vector2(0, 408)
+position = Vector2(0, 400)
 room = ExtResource("6_ar8y0")
 
 [node name="level_2" parent="Rooms/room_2" instance=ExtResource("6_ar8y0")]
 metadata/_edit_lock_ = true
 
-[node name="level_3" parent="Rooms" instance=ExtResource("7_m482c")]
-position = Vector2(808, 408)
+[node name="room_3" parent="Rooms" instance=ExtResource("6_vqxw3")]
+position = Vector2(808, 400)
+room = ExtResource("7_m482c")
+
+[node name="level_3" parent="Rooms/room_3" instance=ExtResource("7_m482c")]
 
 [connection signal="body_entered" from="deathzones" to="deathzones" method="_on_body_entered"]
 [connection signal="player_died" from="deathzones" to="." method="_on_killzone_player_died"]
