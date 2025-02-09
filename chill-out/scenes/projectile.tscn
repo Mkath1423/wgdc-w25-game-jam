@@ -22,5 +22,4 @@ target_position = Vector2(500, 0)
 collision_mask = 3
 collide_with_areas = true
 
-[connection signal="area_entered" from="." to="." method="collide"]
 [connection signal="body_entered" from="." to="." method="collide"]
