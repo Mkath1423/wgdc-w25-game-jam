@@ -1,6 +1,5 @@
 extends Node2D
 
-
 func _ready():
 	$Area2D.body_entered.connect(on_collision_enter)
 	$Area2D.body_exited.connect(on_collision_exit)

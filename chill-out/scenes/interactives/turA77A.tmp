@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://36vw18bv23is"]
+
+[ext_resource type="Script" path="res://src/turret.gd" id="1_5clmj"]
+[ext_resource type="Texture2D" uid="uid://cijnq1sjk4cjv" path="res://sprites/tiles.png" id="2_ao0hc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6y580"]
+size = Vector2(8, 6)
+
+[node name="Turret" type="StaticBody2D"]
+script = ExtResource("1_5clmj")
+shoot_delay = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_6y580")
+
+[node name="shoot_timer" type="Timer" parent="."]
+
+[node name="reload_timer" type="Timer" parent="."]
+
+[node name="loaded" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_ao0hc")
+region_enabled = true
+region_rect = Rect2(48, 72, 8, 8)
+
+[node name="unloaded" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_ao0hc")
+region_enabled = true
+region_rect = Rect2(48, 64, 8, 8)

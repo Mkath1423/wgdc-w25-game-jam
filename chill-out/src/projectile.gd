@@ -24,7 +24,8 @@ func _physics_process(delta):
 
 
 func collide(node):
+	print("collided with", node.name)
 	if node.is_in_group("player"):
 		return
-		
+	
 	queue_free()
