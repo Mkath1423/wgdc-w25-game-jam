@@ -120,3 +120,6 @@ func _physics_process(delta):
 	clamp_falling()
 
 	move_and_slide()
+	
+func on_respawn():
+	$ThermalGun.unload()

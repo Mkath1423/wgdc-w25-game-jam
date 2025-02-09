@@ -9,6 +9,9 @@ func can_load(n):
 func load(ammo: PackedScene):
 	loaded_shots.append(ammo)
 	
+func unload():
+	loaded_shots.clear()
+
 func fire(from: Vector2, to: Vector2):
 	if loaded_shots.size() == 0:
 		return 
