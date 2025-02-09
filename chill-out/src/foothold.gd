@@ -12,7 +12,8 @@ func on_collision_enter(body):
 		tracked_bodies.append(body)
 
 func on_collision_exit(body):
-	tracked_bodies.erase(body)
+	if body is CharacterBody2D:
+		tracked_bodies.erase(body)
 	
 func _physics_process(delta):
 	var to_remove = []
