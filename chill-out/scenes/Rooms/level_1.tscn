@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://xbbu2ru4p84l"]
+[gd_scene load_steps=8 format=4 uid="uid://dnh3bksb7u46f"]
 
 [ext_resource type="PackedScene" uid="uid://cehb7uh35t57g" path="res://scenes/rooms/base_level.tscn" id="1_i7wik"]
 [ext_resource type="PackedScene" uid="uid://3viwbxetyos0" path="res://scenes/ammo_pickups/snow_pile_ammo_pickup.tscn" id="2_1bl4u"]

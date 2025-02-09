@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=4 uid="uid://dmee2fhyxidkk"]
+[gd_scene load_steps=3 format=4 uid="uid://ktltdxq6b46u"]
 
 [ext_resource type="PackedScene" uid="uid://cehb7uh35t57g" path="res://scenes/rooms/base_level.tscn" id="1_5ul2o"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25wwr"]
 size = Vector2(814.5, 403.25)

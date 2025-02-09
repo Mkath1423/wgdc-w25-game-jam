@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsnbta507uqjf"]
+
+[ext_resource type="PackedScene" uid="uid://dmp2ifuv4fknm" path="res://scenes/interactives/switch.tscn" id="1_hb82y"]
+[ext_resource type="Script" path="res://src/freezable_switch.gd" id="2_jew52"]
+
+[node name="FreezableSwitch" instance=ExtResource("1_hb82y")]
+script = ExtResource("2_jew52")
+freeze_duration = 5.0
+
+[node name="Sprite2D" parent="." index="0"]
+vframes = 2
+frame = 3
+region_rect = Rect2(64, 56, 16, 16)
+
+[node name="freeze_timer" type="Timer" parent="." index="2"]
+wait_time = 10.0
+
+[connection signal="timeout" from="freeze_timer" to="." method="_on_timer_timeout"]
