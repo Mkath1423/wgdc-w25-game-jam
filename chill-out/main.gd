@@ -10,7 +10,6 @@ func set_active_room(room):
 	current_spawn_point = room.get_spawn_point()
 
 func _ready() -> void:
-	print($Rooms/Level0)
 	set_active_room(starting_room)
 
 func _on_killzone_player_died() -> void:

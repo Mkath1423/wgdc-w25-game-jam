@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bh8fa5ox2lpx"]
+
+[node name="GateSwitch" type="Node2D"]

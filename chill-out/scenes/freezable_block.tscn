@@ -14,4 +14,6 @@ script = ExtResource("1_ss6nx")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 
+[connection signal="area_entered" from="water_block" to="water_block" method="_on_area_entered"]
 [connection signal="block_frozen" from="water_block" to="." method="_on_water_block_block_frozen"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

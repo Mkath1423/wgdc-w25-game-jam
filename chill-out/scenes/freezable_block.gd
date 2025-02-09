@@ -7,7 +7,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	ice_block.hide() # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,10 +17,11 @@ func _process(delta: float) -> void:
 
 func _on_water_block_block_frozen() -> void:
 	ice_block.set_collision_layer_value(1, true)
-	print("Ice block collision turned on!")
+	ice_block.show()
 	timer.start()
+	$Timer
 
 func _on_timer_timeout() -> void:
 	ice_block.set_collision_layer_value(1, false)
-	print("Ice block collision turned off again!")
+	ice_block.hide()
 	timer.stop()
