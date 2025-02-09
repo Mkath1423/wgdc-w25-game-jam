@@ -11,10 +11,12 @@ script = ExtResource("1_g6hix")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_set = ExtResource("2_pqlro")
-collision_visibility_mode = 1
-
-[node name="CameraBounds" type="CollisionShape2D" parent="."]
-position = Vector2(492, -485.938)
-shape = SubResource("RectangleShape2D_n58o6")
 
 [node name="SpawnPoint" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CameraBounds" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(492, -485.938)
+shape = SubResource("RectangleShape2D_n58o6")
+debug_color = Color(0, 0.6, 0.701961, 0)
