@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=4 uid="uid://ktltdxq6b46u"]
+[gd_scene load_steps=3 format=4 uid="uid://dmee2fhyxidkk"]
 
-[ext_resource type="PackedScene" uid="uid://cu8tni4lsx15t" path="res://scenes/rooms/base_level.tscn" id="1_5ul2o"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/base_level.tscn" id="1_5ul2o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25wwr"]
 size = Vector2(814.5, 403.25)
@@ -14,7 +14,3 @@ tile_map_data = PackedByteArray("AAAAAM7/AAAAAAAAAAAAAM//AAAAAAAAAAAAAND/AAAAAAA
 visible = false
 position = Vector2(402.75, -200.375)
 shape = SubResource("RectangleShape2D_25wwr")
-
-[node name="SpawnPoint" type="Node2D" parent="." index="2"]
-position = Vector2(438, -65)
-scale = Vector2(-9.46904, -2.78211)

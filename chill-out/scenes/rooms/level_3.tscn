@@ -1,12 +1,5 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkne6ua6p0i50"]
+[gd_scene load_steps=2 format=3 uid="uid://b2pykte1uohw"]
 
-[ext_resource type="PackedScene" uid="uid://xbbu2ru4p84l" path="res://scenes/rooms/base_level.tscn" id="1_1hqdg"]
+[ext_resource type="PackedScene" uid="uid://cehb7uh35t57g" path="res://scenes/Rooms/base_level.tscn" id="1_pjs81"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yioja"]
-size = Vector2(975.5, 1006.12)
-
-[node name="base_level" instance=ExtResource("1_1hqdg")]
-
-[node name="CameraBounds" parent="." index="1"]
-position = Vector2(492, -504.938)
-shape = SubResource("RectangleShape2D_yioja")
+[node name="level_3" instance=ExtResource("1_pjs81")]

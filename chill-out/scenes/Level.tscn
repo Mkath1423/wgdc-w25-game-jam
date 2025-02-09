@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1s0nsijw3id3"]
+
+[ext_resource type="Script" path="res://src/level.gd" id="1_f26ym"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwvep"]
+size = Vector2(398, 398)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_f26ym")
+
+[node name="CameraBounds" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_lwvep")
