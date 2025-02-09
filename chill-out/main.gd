@@ -8,8 +8,8 @@ func set_active_room(room):
 	$Camera.bounds = room.get_camera_bounds()
 
 func _ready() -> void:
-	print($Rooms/Level0)
 	set_active_room(starting_room)
 
 func _on_killzone_player_died() -> void:
-	get_tree().reload_current_scene()
+	pass
+	# do whatever is needed to do to respawn.

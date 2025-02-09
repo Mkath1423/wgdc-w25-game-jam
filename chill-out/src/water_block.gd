@@ -11,8 +11,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-func _on_body_entered(body: Node2D) -> void:
-	print("Water block body entered!")
-	if body in get_tree().get_nodes_in_group("projectile"):
+func _on_area_entered(area: Area2D) -> void:
+	if area in get_tree().get_nodes_in_group("projectile"):
 		block_frozen.emit()
