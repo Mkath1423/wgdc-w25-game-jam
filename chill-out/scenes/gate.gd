@@ -2,11 +2,10 @@ extends Node2D
 
 @onready var gate_door = $"Gate Door"
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _on_switch_open_gate() -> void:
+	gate_door.hide()
+	gate_door.set_collision_layer_value(1, false)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_switch_close_gate() -> void:
+	gate_door.show()
+	gate_door.set_collision_layer_value(1, true)

@@ -6,7 +6,7 @@ var active_room : Node2D = null
 var current_spawn_point : Vector2 = Vector2.ZERO
 
 func set_active_room(room):
-	$Camera.bounds = room.get_camera_bounds()
+	#$Camera.bounds = room.get_camera_bounds()
 	current_spawn_point = room.get_spawn_point()
 
 func _ready() -> void:

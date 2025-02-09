@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d3hsl3mh862xf" path="res://sprites/Test sprites (crawl-tiles)/wall/crystal_wall00.png" id="1_6ijd3"]
 [ext_resource type="Texture2D" uid="uid://ix3fgbylb6cr" path="res://sprites/Test sprites (crawl-tiles)/wall/pebble_red0.png" id="2_vfunr"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0d8u2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hwo0s"]
 texture = ExtResource("1_6ijd3")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -14,7 +14,7 @@ texture = ExtResource("1_6ijd3")
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wnkd"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8iwxo"]
 texture = ExtResource("2_vfunr")
 0:0/0 = 0
 1:0/0 = 0
@@ -23,8 +23,8 @@ texture = ExtResource("2_vfunr")
 
 [sub_resource type="TileSet" id="TileSet_wuis8"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_0d8u2")
-sources/1 = SubResource("TileSetAtlasSource_7wnkd")
+sources/0 = SubResource("TileSetAtlasSource_hwo0s")
+sources/1 = SubResource("TileSetAtlasSource_8iwxo")
 
 [node name="Level1" type="Node2D"]
 

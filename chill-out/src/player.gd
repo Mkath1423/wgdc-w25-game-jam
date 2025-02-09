@@ -89,14 +89,18 @@ func _process(delta):
 		)
 		
 	if Input.is_action_just_pressed("pickup"):
-		print("picking")
 		for area in $pickup_range.get_overlapping_areas():
-			print("found: ", area.name, area.has_method("can_take"), area.can_take(1), $ThermalGun.can_load(1))
 			if area.has_method("can_take") and \
 				area.can_take(1) and \
 				$ThermalGun.can_load(1):
-				print("taking from pickup", area)
 				$ThermalGun.load(area.take(1))
+	
+	if Input.is_action_just_pressed("pickup"):
+		print("flipping switch")
+		for area in $pickup_range.get_overlapping_areas():
+			if area.has_method("activate"):
+				print("activing", area.name)
+				area.activate()
 
 func _physics_process(delta):
 	# gravity
