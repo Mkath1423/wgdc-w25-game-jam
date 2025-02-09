@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cehb7uh35t57g"]
+[gd_scene load_steps=4 format=3 uid="uid://cu8tni4lsx15t"]
 
 [ext_resource type="Script" path="res://src/level.gd" id="1_g6hix"]
-[ext_resource type="TileSet" uid="uid://b38ddgiuhnnq7" path="res://sprites/tileset.tres" id="2_pqlro"]
+[ext_resource type="TileSet" uid="uid://db7qo66xpphti" path="res://sprites/tileset.tres" id="2_pqlro"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n58o6"]
 size = Vector2(975.5, 1006.12)

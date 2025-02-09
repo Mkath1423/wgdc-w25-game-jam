@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://drg6qgphcnqn2"]
+[gd_scene load_steps=6 format=3 uid="uid://drg6qgphcnqn2"]
 
 [ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player/player.tscn" id="1_hffy6"]
 [ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://sprites/icon.svg" id="2_i048g"]
-[ext_resource type="PackedScene" uid="uid://c5mnkal840l8g" path="res://scenes/projectiles/projectile.tscn" id="3_6g1o5"]
+[ext_resource type="PackedScene" uid="uid://davmk3gbx4syw" path="res://scenes/Gate.tscn" id="3_xaf8c"]
+[ext_resource type="PackedScene" uid="uid://dmp2ifuv4fknm" path="res://scenes/switch.tscn" id="4_b3ivl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5axcu"]
 size = Vector2(127.645, 123.535)
@@ -10,7 +11,9 @@ size = Vector2(127.645, 123.535)
 [node name="PlayerTesting" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_hffy6")]
-script = null
+position = Vector2(-34.315, 61.1291)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
 
 [node name="floor" type="Sprite2D" parent="."]
 position = Vector2(70, 170)
@@ -23,8 +26,12 @@ texture = ExtResource("2_i048g")
 position = Vector2(-0.118192, -3.72093)
 shape = SubResource("RectangleShape2D_5axcu")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.5, 0.5)
+[node name="Gate" parent="." instance=ExtResource("3_xaf8c")]
+position = Vector2(-111, 102)
 
-[node name="Projectile" parent="." instance=ExtResource("3_6g1o5")]
-position = Vector2(-239, -17)
+[node name="Switch" parent="." instance=ExtResource("4_b3ivl")]
+position = Vector2(-61, 120)
+open_duration = 1.0
+
+[connection signal="close_gate" from="Switch" to="Gate" method="_on_switch_close_gate"]
+[connection signal="open_gate" from="Switch" to="Gate" method="_on_switch_open_gate"]
