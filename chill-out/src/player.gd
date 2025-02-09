@@ -57,6 +57,8 @@ func check_for_jump_cancel():
 func do_jump():
 	velocity.y = -jump_speed
 	jumping = true
+	was_jumping = 0
+	
 
 func strafing(): 
 	var speed = 0

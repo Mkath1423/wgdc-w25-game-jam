@@ -1,4 +1,4 @@
-class_name ReloadPickup extends Node2D
+class_name ReloadPickup extends Area2D
 
 @export var max_capacity : int = 0
 @export var is_infinite  : bool = false
