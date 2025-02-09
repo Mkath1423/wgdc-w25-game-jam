@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bj5hibl12rhgn"]
+[gd_scene load_steps=10 format=3 uid="uid://bj5hibl12rhgn"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_6l0af"]
 [ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player/player.tscn" id="1_kcmov"]
@@ -6,10 +6,11 @@
 [ext_resource type="Script" path="res://src/killzone.gd" id="4_l4ks6"]
 [ext_resource type="PackedScene" uid="uid://dnh3bksb7u46f" path="res://scenes/Rooms/level_1.tscn" id="4_ruq5o"]
 [ext_resource type="PackedScene" uid="uid://ktltdxq6b46u" path="res://scenes/Rooms/level_2.tscn" id="6_ar8y0"]
+[ext_resource type="PackedScene" uid="uid://cvppin2noc831" path="res://scenes/room_spawner.tscn" id="6_vqxw3"]
 [ext_resource type="PackedScene" uid="uid://b2pykte1uohw" path="res://scenes/Rooms/level_3.tscn" id="7_m482c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sn81w"]
-size = Vector2(69, 63)
+size = Vector2(235.5, 63)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_6l0af")
@@ -28,16 +29,24 @@ position = Vector2(84, -224)
 script = ExtResource("4_l4ks6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="deathzones"]
-position = Vector2(-82, -112)
+position = Vector2(475, -258)
 shape = SubResource("RectangleShape2D_sn81w")
 
 [node name="Rooms" type="Node" parent="."]
 
-[node name="level_1" parent="Rooms" instance=ExtResource("4_ruq5o")]
+[node name="room_1" parent="Rooms" instance=ExtResource("6_vqxw3")]
 position = Vector2(0, 8)
+room = ExtResource("4_ruq5o")
 
-[node name="level_2" parent="Rooms" instance=ExtResource("6_ar8y0")]
+[node name="level_1" parent="Rooms/room_1" instance=ExtResource("4_ruq5o")]
+metadata/_edit_lock_ = true
+
+[node name="room_2" parent="Rooms" instance=ExtResource("6_vqxw3")]
 position = Vector2(0, 408)
+room = ExtResource("6_ar8y0")
+
+[node name="level_2" parent="Rooms/room_2" instance=ExtResource("6_ar8y0")]
+metadata/_edit_lock_ = true
 
 [node name="level_3" parent="Rooms" instance=ExtResource("7_m482c")]
 position = Vector2(808, 408)
