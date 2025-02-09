@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://ym3qv2qpdvd6"]
 
-[ext_resource type="Script" path="res://scenes/switch.gd" id="1_1lhbv"]
+[ext_resource type="Script" path="res://src/switch.gd" id="1_38ynp"]
 [ext_resource type="Texture2D" uid="uid://6qrbbmjkm1j8" path="res://sprites/Test sprites (crawl-tiles)/wall/stone_black_marked7.png" id="1_66by2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_igdcb"]
 radius = 5.0
 
 [node name="Switch" type="Area2D"]
-script = ExtResource("1_1lhbv")
+script = ExtResource("1_38ynp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_66by2")

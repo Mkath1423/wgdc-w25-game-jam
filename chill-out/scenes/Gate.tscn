@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cgd0q66vacmbo"]
 
-[ext_resource type="Script" path="res://scenes/gate.gd" id="1_25k5k"]
+[ext_resource type="Script" path="res://src/gate.gd" id="1_25k5k"]
 [ext_resource type="Texture2D" uid="uid://d3nr0ir8l7d48" path="res://sprites/Test sprites (crawl-tiles)/wall/stone_brick1.png" id="1_vx6ry"]
 [ext_resource type="Texture2D" uid="uid://fxeqiwj7maan" path="res://sprites/Test sprites (crawl-tiles)/wall/stone_brick2.png" id="3_jl2cl"]
 

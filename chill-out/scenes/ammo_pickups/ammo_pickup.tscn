@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbl588lrfe2g6"]
 
-[ext_resource type="Script" path="res://scenes/reload_pickup.gd" id="1_jbr2y"]
+[ext_resource type="Script" path="res://src/ammo_pickup.gd" id="1_jbr2y"]
 [ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://sprites/icon.svg" id="1_tjgd6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1j251"]
