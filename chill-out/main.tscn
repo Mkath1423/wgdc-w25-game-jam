@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bj5hibl12rhgn"]
+[gd_scene load_steps=8 format=3 uid="uid://bj5hibl12rhgn"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_6l0af"]
 [ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player.tscn" id="1_kcmov"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bjh6gmbm7q58t" path="res://scenes/LevelTest.tscn" id="5_1hgnn"]
 [ext_resource type="PackedScene" uid="uid://cnhj3m7w02j7t" path="res://scenes/ammo_pickups/freeze_crystal_ammo_pickup.tscn" id="5_oeni4"]
 [ext_resource type="PackedScene" uid="uid://3viwbxetyos0" path="res://scenes/ammo_pickups/snow_pile_ammo_pickup.tscn" id="6_5ypto"]
+[ext_resource type="PackedScene" uid="uid://dvk15siidswn2" path="res://scenes/foothold.tscn" id="7_5krsk"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_6l0af")
@@ -33,3 +34,6 @@ position = Vector2(-6, 134)
 
 [node name="SnowPileAmmoPickup" parent="." instance=ExtResource("6_5ypto")]
 position = Vector2(-146, 165)
+
+[node name="Foothold" parent="." instance=ExtResource("7_5krsk")]
+position = Vector2(-76, 153)
