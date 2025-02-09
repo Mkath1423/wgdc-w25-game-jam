@@ -1,11 +1,11 @@
 class_name FreezeCrystalAmmoPickup extends ReloadPickup
 
 
-func take(n):
+func take_ammo():
 	$Sprite2D.hide()
 	$RefreshTimer.start()
 	$CollisionShape2D.disabled = true
-	return super(n)
+	return super()
 
 func on_refresh_timeout():
 	ammo_left = max_capacity

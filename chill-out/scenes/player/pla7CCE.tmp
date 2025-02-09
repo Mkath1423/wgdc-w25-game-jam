@@ -9,7 +9,7 @@ radius = 15.0
 height = 56.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tg52w"]
-size = Vector2(32, 56)
+size = Vector2(104, 56)
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
 position = Vector2(-3, 4)
@@ -41,5 +41,3 @@ position = Vector2(280.846, 432.313)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pickup_range"]
 shape = SubResource("RectangleShape2D_tg52w")
-
-[connection signal="area_entered" from="pickup_range" to="." method="on_area_collision"]

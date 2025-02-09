@@ -83,17 +83,19 @@ func clamp_falling():
 
 func _process(delta):
 	if Input.is_action_just_pressed("fire"):
+		print("FIRE")
 		$ThermalGun.fire(
-			global_position,
+			global_position + (get_global_mouse_position() - global_position).normalized() * 5,
 			get_global_mouse_position()
 		)
 		
 	if Input.is_action_just_pressed("pickup"):
+		print("checking for ammo pickups")
 		for area in $pickup_range.get_overlapping_areas():
 			if area.has_method("can_take") and \
 				area.can_take(1) and \
 				$ThermalGun.can_load(1):
-				$ThermalGun.load(area.take(1))
+				$ThermalGun.load(area.take_ammo())
 	
 	if Input.is_action_just_pressed("pickup"):
 		print("flipping switch")
@@ -101,6 +103,12 @@ func _process(delta):
 			if area.has_method("activate"):
 				print("activing", area.name)
 				area.activate()
+
+func on_area_collision(area):
+	if area.is_in_group("recharge_crystals") and area.has_method("can_take") and \
+		area.can_take(1) and \
+		$ThermalGun.can_load(1):
+		$ThermalGun.load(area.take_ammo())
 
 func _physics_process(delta):
 	# gravity

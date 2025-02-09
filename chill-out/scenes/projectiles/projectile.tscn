@@ -3,24 +3,26 @@
 [ext_resource type="Script" path="res://src/projectile.gd" id="1_6mmnj"]
 [ext_resource type="Texture2D" uid="uid://cijnq1sjk4cjv" path="res://sprites/tiles.png" id="2_ew7lq"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2e27c"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_phs23"]
+radius = 2.0
+height = 6.0
 
 [node name="Projectile" type="Area2D" groups=["projectile"]]
-scale = Vector2(0.1, 0.1)
 script = ExtResource("1_6mmnj")
-move_speed = 500.0
+move_speed = 350.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+rotation = 1.5708
 texture = ExtResource("2_ew7lq")
 region_enabled = true
 region_rect = Rect2(50, 17, 3, 6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_2e27c")
+shape = SubResource("CapsuleShape2D_phs23")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-target_position = Vector2(500, 0)
+target_position = Vector2(100, 0)
 collision_mask = 3
 collide_with_areas = true
 

@@ -11,7 +11,7 @@ radius = 4.0
 [node name="FreezeCrystalAmmoPickup" groups=["recharge_crystals"] instance=ExtResource("1_monhc")]
 script = ExtResource("2_ivu2v")
 max_capacity = 1
-is_infinite = false
+is_infinite = null
 projectile = ExtResource("3_0wmpb")
 
 [node name="Sprite2D" parent="." index="0"]

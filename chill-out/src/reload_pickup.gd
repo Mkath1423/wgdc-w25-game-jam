@@ -10,6 +10,6 @@ class_name ReloadPickup extends Node2D
 func can_take(n):
 	return ammo_left >= n or is_infinite 
 
-func take(n):
+func take_ammo():
 	ammo_left = max(ammo_left, 0)
 	return projectile
