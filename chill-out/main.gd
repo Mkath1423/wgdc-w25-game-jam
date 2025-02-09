@@ -2,6 +2,7 @@ extends Node2D
 
 
 @onready var starting_room : Node2D = $Rooms/level_1
+
 var active_room : Node2D = null
 var current_spawn_point : Vector2 = Vector2.ZERO
 
@@ -22,6 +23,7 @@ func set_active_room(room):
 
 func _ready() -> void:
 	set_active_room(starting_room)
+	$player.global_position = current_spawn_point
 
 func _on_killzone_player_died() -> void:
 	$player.on_respawn()

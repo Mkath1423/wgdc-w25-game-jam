@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://bj5hibl12rhgn"]
+[gd_scene load_steps=8 format=3 uid="uid://bj5hibl12rhgn"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_6l0af"]
 [ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player/player.tscn" id="1_kcmov"]
 [ext_resource type="PackedScene" uid="uid://vrdfrblclk7p" path="res://scenes/animated_camera.tscn" id="2_5vn3v"]
-[ext_resource type="PackedScene" uid="uid://dnh3bksb7u46f" path="res://scenes/rooms/level_1.tscn" id="4_ruq5o"]
-[ext_resource type="PackedScene" uid="uid://d3dkbtmy5xcl3" path="res://scenes/rooms/level_2.tscn" id="5_0lhwu"]
+[ext_resource type="Script" path="res://src/killzone.gd" id="4_l4ks6"]
+[ext_resource type="PackedScene" uid="uid://dnh3bksb7u46f" path="res://scenes/Rooms/level_1.tscn" id="4_ruq5o"]
+[ext_resource type="PackedScene" uid="uid://ktltdxq6b46u" path="res://scenes/rooms/level_2.tscn" id="5_0lhwu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sn81w"]
+size = Vector2(412, 63)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_6l0af")
@@ -19,6 +23,13 @@ min_follow_distance = 1.0
 [node name="player" parent="." instance=ExtResource("1_kcmov")]
 position = Vector2(84, -224)
 
+[node name="deathzones" type="Area2D" parent="."]
+script = ExtResource("4_l4ks6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deathzones"]
+position = Vector2(196, -21.5)
+shape = SubResource("RectangleShape2D_sn81w")
+
 [node name="Rooms" type="Node" parent="."]
 
 [node name="level_1" parent="Rooms" instance=ExtResource("4_ruq5o")]
@@ -28,3 +39,6 @@ metadata/_edit_lock_ = true
 [node name="level_2" parent="Rooms" instance=ExtResource("5_0lhwu")]
 position = Vector2(0, 400)
 metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="deathzones" to="deathzones" method="_on_body_entered"]
+[connection signal="player_died" from="deathzones" to="." method="_on_killzone_player_died"]

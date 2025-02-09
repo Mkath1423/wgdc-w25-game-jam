@@ -3,7 +3,6 @@ class_name Player extends CharacterBody2D
 @export var ground_move_speed = 0
 @export var air_move_speed = 0
 
-
 @export var jump_speed = 0
 
 @export var max_fall_speed = 0
