@@ -34,10 +34,12 @@ func smooth_follow(delta: float):
 	if player == null: 
 		return
 
-	var clamped_world_pos = player.get_world_center().clamp(
-		bounds.position + 0.5 * camera_size,
-		bounds.position + bounds.size - 0.5 * camera_size
-	)
+	#var clamped_world_pos = player.get_world_center().clamp(
+		#bounds.position + 0.5 * camera_size,
+		#bounds.position + bounds.size - 0.5 * camera_size
+	#)
+	
+	var clamped_world_pos = player.get_world_center()
 	
 	var to_player = clamped_world_pos - global_position
 	var dist = to_player.length()
