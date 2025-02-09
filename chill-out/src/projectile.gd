@@ -1,4 +1,4 @@
-class_name Projectile extends Node2D
+class_name Projectile extends Area2D
 
 @export var move_speed : float = 0.0
 var move_direction : Vector2 = Vector2(1, 0)
@@ -13,14 +13,17 @@ func on_create(from: Vector2, to: Vector2):
 	
 func _physics_process(delta):
 	raycast.force_raycast_update()
-		
+		#
 	var move_distance : float =  move_speed * delta
-	
+	#
 	if raycast.is_colliding() and (raycast.get_collision_point() - position).length() < move_distance:
 		global_position = raycast.get_collision_point()
 		
 	else:
 		global_position += move_direction * move_distance
+	
+	for body in get_overlapping_bodies():
+		collide(body)
 
 
 func collide(node):

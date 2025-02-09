@@ -14,3 +14,4 @@ func _process(delta: float) -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if area in get_tree().get_nodes_in_group("projectile"):
 		block_frozen.emit()
+		area.collide(self)
