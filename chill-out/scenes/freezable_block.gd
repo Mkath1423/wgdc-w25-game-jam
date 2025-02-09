@@ -19,6 +19,7 @@ func _on_water_block_block_frozen() -> void:
 	ice_block.set_collision_layer_value(1, true)
 	ice_block.show()
 	timer.start()
+	$Timer
 
 func _on_timer_timeout() -> void:
 	ice_block.set_collision_layer_value(1, false)
