@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player/player.tscn" id="1_kcmov"]
 [ext_resource type="PackedScene" uid="uid://vrdfrblclk7p" path="res://scenes/animated_camera.tscn" id="2_5vn3v"]
 [ext_resource type="Script" path="res://src/killzone.gd" id="4_l4ks6"]
-[ext_resource type="PackedScene" uid="uid://dnh3bksb7u46f" path="res://scenes/Rooms/level_1.tscn" id="4_ruq5o"]
-[ext_resource type="PackedScene" uid="uid://ktltdxq6b46u" path="res://scenes/Rooms/level_2.tscn" id="6_ar8y0"]
-[ext_resource type="PackedScene" uid="uid://cvppin2noc831" path="res://scenes/room_spawner.tscn" id="6_vqxw3"]
+[ext_resource type="PackedScene" uid="uid://xbbu2ru4p84l" path="res://scenes/Rooms/level_1.tscn" id="4_ruq5o"]
+[ext_resource type="PackedScene" uid="uid://dmee2fhyxidkk" path="res://scenes/Rooms/level_2.tscn" id="6_ar8y0"]
+[ext_resource type="PackedScene" path="res://scenes/room_spawner.tscn" id="6_vqxw3"]
 [ext_resource type="PackedScene" uid="uid://b2pykte1uohw" path="res://scenes/Rooms/level_3.tscn" id="7_m482c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sn81w"]
@@ -48,8 +48,11 @@ room = ExtResource("6_ar8y0")
 [node name="level_2" parent="Rooms/room_2" instance=ExtResource("6_ar8y0")]
 metadata/_edit_lock_ = true
 
-[node name="level_3" parent="Rooms" instance=ExtResource("7_m482c")]
+[node name="room_3" parent="Rooms" instance=ExtResource("6_vqxw3")]
 position = Vector2(808, 408)
+room = ExtResource("7_m482c")
+
+[node name="level_3" parent="Rooms/room_3" instance=ExtResource("7_m482c")]
 
 [connection signal="body_entered" from="deathzones" to="deathzones" method="_on_body_entered"]
 [connection signal="player_died" from="deathzones" to="." method="_on_killzone_player_died"]
