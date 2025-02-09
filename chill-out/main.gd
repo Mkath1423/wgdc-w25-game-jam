@@ -6,18 +6,22 @@ extends Node2D
 var active_room : Node2D = null
 var current_spawn_point : Vector2 = Vector2.ZERO
 
-func set_active_room(room):
-	if room == null:
-		print("failed to set active room to null")
+func set_active_room(room: Node2D):
+	if room.get_children().size() != 1:
+		print("failed to set active room")
 		return
-	if room.has_method("get_camera_bounds"):
-		$Camera.bounds = room.get_camera_bounds()
+	
+	active_room = room
+	var level = room.get_children()[0]
+	
+	if level.has_method("get_camera_bounds"):
+		$Camera.bounds = level.get_camera_bounds()
 	else:
 		print("failed to get camera bounds")
 	
 	
-	if room.has_method("get_spawn_point"):
-		current_spawn_point = room.get_spawn_point()
+	if level.has_method("get_spawn_point"):
+		current_spawn_point = level.get_spawn_point()
 	else:
 		print("failed to get spawn point")
 
@@ -29,4 +33,4 @@ func _on_killzone_player_died() -> void:
 	$player.on_respawn()
 	$player.global_position = current_spawn_point
 	# reload the room
-	#get_tree().reload_current_scene()
+	active_room.respawn()
