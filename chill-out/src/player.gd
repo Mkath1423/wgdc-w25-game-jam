@@ -89,7 +89,14 @@ func _process(delta):
 		)
 		
 	if Input.is_action_just_pressed("pickup"):
-		$ThermalGun.load(preload("res://scenes/projectile.tscn"))
+		print("picking")
+		for area in $pickup_range.get_overlapping_areas():
+			print("found: ", area.name, area.has_method("can_take"), area.can_take(1), $ThermalGun.can_load(1))
+			if area.has_method("can_take") and \
+				area.can_take(1) and \
+				$ThermalGun.can_load(1):
+				print("taking from pickup", area)
+				$ThermalGun.load(area.take(1))
 
 func _physics_process(delta):
 	# gravity

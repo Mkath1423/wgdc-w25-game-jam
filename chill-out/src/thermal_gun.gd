@@ -3,8 +3,8 @@ extends Node2D
 @export var max_capacity : int = 0
 var loaded_shots : Array[PackedScene] = []
 
-func can_load(): 
-	return loaded_shots.size() < max_capacity
+func can_load(n): 
+	return loaded_shots.size() + n <= max_capacity
 
 func load(ammo: PackedScene):
 	loaded_shots.append(ammo)

@@ -4,5 +4,6 @@
 
 [node name="ThermalGun" type="Node2D"]
 script = ExtResource("1_wnry3")
+max_capacity = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
