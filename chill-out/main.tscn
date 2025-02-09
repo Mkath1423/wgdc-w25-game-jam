@@ -1,15 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bj5hibl12rhgn"]
+[gd_scene load_steps=7 format=3 uid="uid://bj5hibl12rhgn"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_6l0af"]
 [ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player.tscn" id="1_kcmov"]
 [ext_resource type="PackedScene" uid="uid://vrdfrblclk7p" path="res://scenes/animated_camera.tscn" id="4_li6ow"]
 [ext_resource type="PackedScene" uid="uid://xbbu2ru4p84l" path="res://scenes/Rooms/level_1.tscn" id="4_wiu87"]
+[ext_resource type="PackedScene" uid="uid://cnhj3m7w02j7t" path="res://scenes/ammo_pickups/freeze_crystal_ammo_pickup.tscn" id="5_oeni4"]
+[ext_resource type="PackedScene" uid="uid://3viwbxetyos0" path="res://scenes/ammo_pickups/snow_pile_ammo_pickup.tscn" id="6_5ypto"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_6l0af")
 
 [node name="player" parent="." instance=ExtResource("1_kcmov")]
-position = Vector2(-133, 125)
+position = Vector2(-131, 168)
 
 [node name="Camera" parent="." instance=ExtResource("4_li6ow")]
 position = Vector2(-182, 144)
@@ -25,3 +27,9 @@ min_pan_rate = 50.0
 [node name="Rooms" type="Node" parent="."]
 
 [node name="Level1" parent="Rooms" instance=ExtResource("4_wiu87")]
+
+[node name="FreezeCrystalAmmoPickup" parent="." instance=ExtResource("5_oeni4")]
+position = Vector2(-6, 134)
+
+[node name="SnowPileAmmoPickup" parent="." instance=ExtResource("6_5ypto")]
+position = Vector2(-146, 165)

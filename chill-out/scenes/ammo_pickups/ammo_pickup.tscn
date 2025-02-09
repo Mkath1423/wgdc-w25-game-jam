@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbl588lrfe2g6"]
+
+[ext_resource type="Script" path="res://scenes/reload_pickup.gd" id="1_jbr2y"]
+[ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://sprites/icon.svg" id="1_tjgd6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1j251"]
+radius = 249.0
+
+[node name="AmmoPickup" type="Area2D"]
+script = ExtResource("1_jbr2y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.96875, 1.40625)
+texture = ExtResource("1_tjgd6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1j251")

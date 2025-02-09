@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://dydqh2pwn52wh"]
+[gd_scene load_steps=8 format=4 uid="uid://bjh6gmbm7q58t"]
 
 [ext_resource type="Script" path="res://src/level.gd" id="1_sni0a"]
 [ext_resource type="Texture2D" uid="uid://d3hsl3mh862xf" path="res://sprites/Test sprites (crawl-tiles)/wall/crystal_wall00.png" id="2_1ynox"]
