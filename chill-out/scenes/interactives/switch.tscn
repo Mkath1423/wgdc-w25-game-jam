@@ -1,18 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://ym3qv2qpdvd6"]
+[gd_scene load_steps=4 format=3 uid="uid://dmp2ifuv4fknm"]
 
-[ext_resource type="Script" path="res://src/switch.gd" id="1_38ynp"]
-[ext_resource type="Texture2D" uid="uid://6qrbbmjkm1j8" path="res://sprites/Test sprites (crawl-tiles)/wall/stone_black_marked7.png" id="1_66by2"]
+[ext_resource type="Script" path="res://src/switch.gd" id="1_1lhbv"]
+[ext_resource type="Texture2D" uid="uid://cijnq1sjk4cjv" path="res://sprites/tiles.png" id="2_ng35q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_igdcb"]
 radius = 5.0
 
 [node name="Switch" type="Area2D"]
-script = ExtResource("1_38ynp")
+script = ExtResource("1_1lhbv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_66by2")
+texture_filter = 1
+texture = ExtResource("2_ng35q")
+hframes = 2
 region_enabled = true
-region_rect = Rect2(13, 15, 8, 8)
+region_rect = Rect2(64, 72, 16, 8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_igdcb")

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://drg6qgphcnqn2"]
+[gd_scene load_steps=7 format=3 uid="uid://drg6qgphcnqn2"]
 
 [ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player/player.tscn" id="1_hffy6"]
 [ext_resource type="Texture2D" uid="uid://dtk4alli1j447" path="res://sprites/icon.svg" id="2_i048g"]
-[ext_resource type="PackedScene" uid="uid://davmk3gbx4syw" path="res://scenes/Gate.tscn" id="3_xaf8c"]
-[ext_resource type="PackedScene" uid="uid://dmp2ifuv4fknm" path="res://scenes/switch.tscn" id="4_b3ivl"]
+[ext_resource type="PackedScene" uid="uid://davmk3gbx4syw" path="res://scenes/interactives/Gate.tscn" id="3_xaf8c"]
+[ext_resource type="PackedScene" uid="uid://dsnbta507uqjf" path="res://scenes/interactives/freezable_switch.tscn" id="5_61iy4"]
+[ext_resource type="PackedScene" uid="uid://cnhj3m7w02j7t" path="res://scenes/ammo_pickups/freeze_crystal_ammo_pickup.tscn" id="5_ie0o8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5axcu"]
 size = Vector2(127.645, 123.535)
@@ -14,6 +15,7 @@ size = Vector2(127.645, 123.535)
 position = Vector2(-34.315, 61.1291)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(4, 4)
 
 [node name="floor" type="Sprite2D" parent="."]
 position = Vector2(70, 170)
@@ -29,9 +31,12 @@ shape = SubResource("RectangleShape2D_5axcu")
 [node name="Gate" parent="." instance=ExtResource("3_xaf8c")]
 position = Vector2(-111, 102)
 
-[node name="Switch" parent="." instance=ExtResource("4_b3ivl")]
-position = Vector2(-61, 120)
+[node name="FreezableSwitch" parent="." instance=ExtResource("5_61iy4")]
+position = Vector2(-174, 122)
 open_duration = 1.0
 
-[connection signal="close_gate" from="Switch" to="Gate" method="_on_switch_close_gate"]
-[connection signal="open_gate" from="Switch" to="Gate" method="_on_switch_open_gate"]
+[node name="FreezeCrystalAmmoPickup" parent="." instance=ExtResource("5_ie0o8")]
+position = Vector2(-151, 91)
+
+[connection signal="close_gate" from="FreezableSwitch" to="Gate" method="_on_switch_close_gate"]
+[connection signal="open_gate" from="FreezableSwitch" to="Gate" method="_on_switch_open_gate"]

@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgd0q66vacmbo"]
+[gd_scene load_steps=5 format=3 uid="uid://davmk3gbx4syw"]
 
 [ext_resource type="Script" path="res://src/gate.gd" id="1_25k5k"]
-[ext_resource type="Texture2D" uid="uid://cijnq1sjk4cjv" path="res://sprites/tiles.png" id="2_ky4re"]
+[ext_resource type="Texture2D" uid="uid://cijnq1sjk4cjv" path="res://sprites/tiles.png" id="2_08b7q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tkwd6"]
 size = Vector2(8, 8)
@@ -22,7 +22,7 @@ shape = SubResource("RectangleShape2D_tkwd6")
 texture_filter = 1
 position = Vector2(-4, -4.14286)
 scale = Vector2(1, 1.03571)
-texture = ExtResource("2_ky4re")
+texture = ExtResource("2_08b7q")
 region_enabled = true
 region_rect = Rect2(48, 0, 8, 8)
 
@@ -35,6 +35,6 @@ shape = SubResource("RectangleShape2D_fkppv")
 [node name="Sprite2D" type="Sprite2D" parent="Gate Door"]
 texture_filter = 1
 position = Vector2(-4, 12)
-texture = ExtResource("2_ky4re")
+texture = ExtResource("2_08b7q")
 region_enabled = true
 region_rect = Rect2(56, 56, 8, 24)

@@ -1,4 +1,4 @@
-extends Area2D
+class_name Switch extends Area2D
 
 signal open_gate
 signal close_gate
