@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://main.gd" id="1_6l0af"]
 [ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player.tscn" id="1_kcmov"]
 [ext_resource type="PackedScene" uid="uid://vrdfrblclk7p" path="res://scenes/animated_camera.tscn" id="4_li6ow"]
-[ext_resource type="PackedScene" uid="uid://dydqh2pwn52wh" path="res://scenes/LevelTest.tscn" id="5_1hgnn"]
+[ext_resource type="PackedScene" uid="uid://xbbu2ru4p84l" path="res://scenes/Rooms/level_1.tscn" id="4_wiu87"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_6l0af")
@@ -24,4 +24,4 @@ min_pan_rate = 50.0
 
 [node name="Rooms" type="Node" parent="."]
 
-[node name="Level1" parent="Rooms" instance=ExtResource("5_1hgnn")]
+[node name="Level1" parent="Rooms" instance=ExtResource("4_wiu87")]

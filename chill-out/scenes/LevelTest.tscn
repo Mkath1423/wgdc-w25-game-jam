@@ -70,7 +70,7 @@ sources/3 = SubResource("TileSetAtlasSource_guqlh")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lwvep"]
 size = Vector2(398, 398)
 
-[node name="Level1" type="Node2D"]
+[node name="LevelTest" type="Node2D"]
 script = ExtResource("1_sni0a")
 
 [node name="FreezableBlock" parent="." instance=ExtResource("4_2u6up")]
