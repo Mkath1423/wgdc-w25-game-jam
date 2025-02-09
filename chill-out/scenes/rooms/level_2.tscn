@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://ktltdxq6b46u"]
+[gd_scene load_steps=7 format=4 uid="uid://dmee2fhyxidkk"]
 
-[ext_resource type="PackedScene" uid="uid://cu8tni4lsx15t" path="res://scenes/rooms/base_level.tscn" id="1_5ul2o"]
+[ext_resource type="PackedScene" uid="uid://cehb7uh35t57g" path="res://scenes/rooms/base_level.tscn" id="1_5ul2o"]
 [ext_resource type="PackedScene" uid="uid://cdodhuto2lk5" path="res://scenes/interactives/freezable_block.tscn" id="2_hya2g"]
 [ext_resource type="PackedScene" uid="uid://bdjhukqkbfwrx" path="res://scenes/interactives/killzone.tscn" id="3_gs72o"]
 [ext_resource type="PackedScene" uid="uid://cnhj3m7w02j7t" path="res://scenes/ammo_pickups/freeze_crystal_ammo_pickup.tscn" id="4_4xoaj"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bj5hibl12rhgn"]
+[gd_scene load_steps=12 format=3 uid="uid://bj5hibl12rhgn"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_6l0af"]
 [ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player/player.tscn" id="1_kcmov"]
@@ -12,6 +12,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sn81w"]
 size = Vector2(296.75, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6v0y"]
+size = Vector2(131, 21)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_6l0af")
@@ -37,13 +40,17 @@ shape = SubResource("RectangleShape2D_sn81w")
 position = Vector2(1022, 428)
 shape = SubResource("RectangleShape2D_sn81w")
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="deathzones"]
+position = Vector2(1370, 392)
+shape = SubResource("RectangleShape2D_i6v0y")
+
 [node name="Rooms" type="Node" parent="."]
 
-[node name="spawner" parent="Rooms" instance=ExtResource("6_vqxw3")]
+[node name="room_4" parent="Rooms" instance=ExtResource("6_vqxw3")]
 room = ExtResource("5_ff48b")
 
-[node name="level_4" parent="Rooms/spawner" instance=ExtResource("5_ff48b")]
-position = Vector2(1208, 408)
+[node name="level_4" parent="Rooms/room_4" instance=ExtResource("5_ff48b")]
+position = Vector2(1208, 400)
 
 [node name="room_1" parent="Rooms" instance=ExtResource("6_vqxw3")]
 room = ExtResource("4_ruq5o")
