@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player/player.tscn" id="1_kcmov"]
 [ext_resource type="PackedScene" uid="uid://vrdfrblclk7p" path="res://scenes/animated_camera.tscn" id="2_5vn3v"]
 [ext_resource type="Script" path="res://src/killzone.gd" id="4_l4ks6"]
-[ext_resource type="PackedScene" uid="uid://xbbu2ru4p84l" path="res://scenes/Rooms/level_1.tscn" id="4_ruq5o"]
-[ext_resource type="PackedScene" uid="uid://dmee2fhyxidkk" path="res://scenes/Rooms/level_2.tscn" id="6_ar8y0"]
+[ext_resource type="PackedScene" uid="uid://dnh3bksb7u46f" path="res://scenes/Rooms/level_1.tscn" id="4_ruq5o"]
+[ext_resource type="PackedScene" uid="uid://ktltdxq6b46u" path="res://scenes/Rooms/level_2.tscn" id="6_ar8y0"]
 [ext_resource type="PackedScene" uid="uid://b2pykte1uohw" path="res://scenes/Rooms/level_3.tscn" id="7_m482c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sn81w"]
