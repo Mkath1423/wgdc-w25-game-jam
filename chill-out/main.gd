@@ -1,7 +1,8 @@
 extends Node2D
 
 
-@onready var starting_room : Node2D = $Rooms/room_4
+@onready var starting_room : Node2D = $Rooms/room_1
+
 
 var active_room : Node2D = null
 var current_spawn_point : Vector2 = Vector2.ZERO

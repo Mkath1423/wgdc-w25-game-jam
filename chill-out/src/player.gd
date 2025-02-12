@@ -58,7 +58,11 @@ func do_jump():
 	velocity.y = -jump_speed
 	jumping = true
 	was_jumping = 0
-	
+
+
+func update_ui():
+	print("updateing ui")
+	$ammo_ui.frame = $ThermalGun.loaded_shots.size()
 
 func strafing(): 
 	var speed = 0
@@ -89,6 +93,7 @@ func _process(delta):
 			global_position + (get_global_mouse_position() - global_position).normalized() * 5,
 			get_global_mouse_position()
 		)
+		update_ui()
 		
 	if Input.is_action_just_pressed("pickup"):
 		print("checking for ammo pickups")
@@ -97,6 +102,7 @@ func _process(delta):
 				area.can_take(1) and \
 				$ThermalGun.can_load(1):
 				$ThermalGun.load(area.take_ammo())
+				update_ui()
 	
 	if Input.is_action_just_pressed("pickup"):
 		print("flipping switch")
@@ -110,6 +116,7 @@ func on_area_collision(area):
 		area.can_take(1) and \
 		$ThermalGun.can_load(1):
 		$ThermalGun.load(area.take_ammo())
+		update_ui()
 
 func _physics_process(delta):
 	# gravity
@@ -136,3 +143,4 @@ func _physics_process(delta):
 	
 func on_respawn():
 	$ThermalGun.unload()
+	update_ui()

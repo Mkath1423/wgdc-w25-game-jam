@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bsiba0xh01axl"]
+[gd_scene load_steps=7 format=3 uid="uid://bsiba0xh01axl"]
 
 [ext_resource type="Script" path="res://src/player.gd" id="1_g6mxo"]
 [ext_resource type="Texture2D" uid="uid://b1ugua7owrhbg" path="res://sprites/derpmei.png" id="2_paqwx"]
 [ext_resource type="PackedScene" uid="uid://b2siuigsiugyw" path="res://scenes/player/thermal_gun.tscn" id="3_w65ue"]
+[ext_resource type="Texture2D" uid="uid://bb4jf0ptt13j6" path="res://sprites/ammo.png" id="4_ogyrp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnf7x"]
 radius = 4.0
@@ -40,5 +41,11 @@ position = Vector2(280.846, 432.313)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pickup_range"]
 shape = SubResource("RectangleShape2D_tg52w")
+
+[node name="ammo_ui" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-0.5, -14)
+texture = ExtResource("4_ogyrp")
+vframes = 4
 
 [connection signal="area_entered" from="pickup_range" to="." method="on_area_collision"]

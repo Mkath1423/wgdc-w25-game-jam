@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://3viwbxetyos0"]
+[gd_scene load_steps=6 format=3 uid="uid://3viwbxetyos0"]
 
 [ext_resource type="PackedScene" uid="uid://dbl588lrfe2g6" path="res://scenes/ammo_pickups/ammo_pickup.tscn" id="1_jwtra"]
 [ext_resource type="PackedScene" uid="uid://c5mnkal840l8g" path="res://scenes/projectiles/projectile.tscn" id="2_0prux"]
 [ext_resource type="Texture2D" uid="uid://cijnq1sjk4cjv" path="res://sprites/tiles.png" id="2_4glnb"]
+[ext_resource type="Texture2D" uid="uid://dok44lx0lxua4" path="res://sprites/pressE.png" id="4_pdsck"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jpqxn"]
 size = Vector2(26, 17)
@@ -23,3 +24,8 @@ region_rect = Rect2(56, 24, 16, 16)
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2(-0.1, -0.5)
 shape = SubResource("RectangleShape2D_jpqxn")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="2"]
+texture_filter = 1
+position = Vector2(-0.1, -6)
+texture = ExtResource("4_pdsck")
