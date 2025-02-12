@@ -4,15 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://bsiba0xh01axl" path="res://scenes/player/player.tscn" id="1_kcmov"]
 [ext_resource type="PackedScene" uid="uid://vrdfrblclk7p" path="res://scenes/animated_camera.tscn" id="2_5vn3v"]
 [ext_resource type="Script" path="res://src/killzone.gd" id="4_l4ks6"]
-[ext_resource type="PackedScene" uid="uid://dnh3bksb7u46f" path="res://scenes/Rooms/level_1.tscn" id="4_ruq5o"]
-[ext_resource type="PackedScene" uid="uid://8d0pfay31jgs" path="res://scenes/Rooms/level_4.tscn" id="5_ff48b"]
-[ext_resource type="PackedScene" uid="uid://ktltdxq6b46u" path="res://scenes/Rooms/level_2.tscn" id="6_ar8y0"]
-[ext_resource type="PackedScene" uid="uid://cvppin2noc831" path="res://scenes/room_spawner.tscn" id="6_vqxw3"]
-[ext_resource type="PackedScene" uid="uid://b2pykte1uohw" path="res://scenes/Rooms/level_3.tscn" id="7_m482c"]
+[ext_resource type="PackedScene" uid="uid://dnh3bksb7u46f" path="res://scenes/rooms/level_1.tscn" id="4_ruq5o"]
+[ext_resource type="PackedScene" uid="uid://8d0pfay31jgs" path="res://scenes/rooms/level_4.tscn" id="5_ff48b"]
+[ext_resource type="PackedScene" uid="uid://ktltdxq6b46u" path="res://scenes/rooms/level_2.tscn" id="6_ar8y0"]
+[ext_resource type="PackedScene" path="res://scenes/room_spawner.tscn" id="6_vqxw3"]
+[ext_resource type="PackedScene" uid="uid://b2pykte1uohw" path="res://scenes/rooms/level_3.tscn" id="7_m482c"]
 [ext_resource type="Texture2D" uid="uid://c3xn5t6awectw" path="res://sprites/trophy.png" id="10_hx8to"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sn81w"]
-size = Vector2(296.75, 63)
+size = Vector2(370.375, 63)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i6v0y"]
 size = Vector2(131, 21)
@@ -41,7 +41,7 @@ position = Vector2(603, 436)
 shape = SubResource("RectangleShape2D_sn81w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="deathzones"]
-position = Vector2(1022, 428)
+position = Vector2(985.188, 428)
 shape = SubResource("RectangleShape2D_sn81w")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="deathzones"]
